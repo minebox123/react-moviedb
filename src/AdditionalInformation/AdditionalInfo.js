@@ -33,7 +33,7 @@ class AdditionalInfo extends Component {
   }
   render() {
     const { movie, isLoading } = this.state;
-    console.log(movie);
+
     const style = {
       backgroundImage: `url(https://image.tmdb.org/t/p/w1280/${
         movie.backdrop_path
@@ -103,9 +103,9 @@ class AdditionalInfo extends Component {
               <div className="media-links">
                 <h2>Media</h2>
                 <ul>
-                  <li className="video-tab">Videos</li>
-                  <li className="backdrop-tab">Backdrops</li>
-                  <li className="poster-tab">Posters</li>
+                  <li>Videos</li>
+                  <li>Backdrops</li>
+                  <li>Posters</li>
                 </ul>
               </div>
               <Videos id={movie.id} />

@@ -10,7 +10,6 @@ export default function MainContainer() {
     <React.Fragment>
       <Trending />
       <NewReleases />
-
       <NowPlaying />
       <Trailer />
       <TopRated />

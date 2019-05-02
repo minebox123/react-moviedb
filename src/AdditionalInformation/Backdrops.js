@@ -11,19 +11,17 @@ class Backdrops extends Component {
     )
       .then(res => res.json())
       .then(data => {
-        const backdrop = data.backdrops
-          .filter(item => item.iso_639_1 === "en")
-          .map((item, index) => {
-            return (
-              <li className="backdrop-list" key={index}>
-                <img
-                  src={`https://image.tmdb.org/t/p/w1280/${item.file_path}`}
-                  alt="movie"
-                  className="backdrop"
-                />
-              </li>
-            );
-          });
+        const backdrop = data.backdrops.map((item, index) => {
+          return (
+            <li className="backdrop-list" key={index}>
+              <img
+                src={`https://image.tmdb.org/t/p/w1280/${item.file_path}`}
+                alt="movie"
+                className="backdrop"
+              />
+            </li>
+          );
+        });
         this.setState({
           backdrops: backdrop
         });
@@ -31,7 +29,7 @@ class Backdrops extends Component {
   }
   render() {
     const { backdrops } = this.state;
-    console.log(backdrops);
+
     return <div className="backdrops-container">{backdrops}</div>;
   }
 }

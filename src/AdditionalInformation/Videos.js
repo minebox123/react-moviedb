@@ -39,3 +39,5 @@ class Videos extends Component {
 }
 
 export default Videos;
+
+/* <a href="https://www.freepik.com/free-photos-vectors/logo">Logo vector created by BiZkettE1 - www.freepik.com</a> */

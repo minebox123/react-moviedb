@@ -1,8 +1,16 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Cast extends Component {
   state = {
-    cast: []
+    cast: [],
+    actorId: null
+  };
+
+  onActorClick = e => {
+    this.setState({
+      actorId: e.target.id
+    });
   };
   componentDidMount() {
     const { id } = this.props;
@@ -14,10 +22,16 @@ class Cast extends Component {
         const actor = data.cast.slice(0, 5).map(item => {
           return (
             <li className="actor-list" key={item.id}>
-              <img
-                src={`https://image.tmdb.org/t/p/w500/${item.profile_path}`}
-                alt={item.name}
-              />
+              <div className="overlay">
+                <Link to={`/actorInfo/${item.id}`}>
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500/${item.profile_path}`}
+                    alt={item.name}
+                    id={item.id}
+                    onClick={this.onActorClick}
+                  />
+                </Link>
+              </div>
               <h4>{item.name}</h4>
               <p>{item.character}</p>
             </li>

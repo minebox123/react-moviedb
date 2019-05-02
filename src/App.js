@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "./layout/Header";
 import MainContainer from "./MainContainer";
 import Footer from "./layout/Footer";
-// import AdditionalInfo from "./AdditionalInformation/AdditionalInfo";
+import ActorInfo from "./Actors/ActorInfo";
 import MovieInfo from "./MovieInfo";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./JavaScript/index.js";
@@ -19,6 +19,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={MainContainer} />
               <Route exact path="/movieInfo/:id" component={MovieInfo} />
+              <Route exact path="/actorInfo/:id" component={ActorInfo} />
             </Switch>
           </div>
           <Footer />

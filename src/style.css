@@ -531,6 +531,7 @@ footer {
 .actor-list img {
   width: 168px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .actor-container {
@@ -617,7 +618,7 @@ footer {
 .backdrops-container {
   width: 1200px;
   margin: 0 auto;
-  display: none;
+  display: flex;
   overflow: scroll;
 }
 
@@ -630,7 +631,7 @@ footer {
   margin-bottom: 10px;
 }
 .posters-container {
-  display: none;
+  display: flex;
   width: 1200px;
   margin: 0 auto;
   overflow: scroll;
@@ -652,5 +653,23 @@ footer {
   display: flex;
   align-items: center;
 }
-.active {
+
+/* ACTOR INFORMATION */
+.actor {
+  background-color: #fff;
+}
+.actorInfo-container {
+  background-color: #fff;
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+.personalInfo {
+  background-color: #f6f6f6;
+}
+.personalInfo img {
+  border-radius: 5px;
+}
+.bio {
+  background-color: #f6f6f6;
 }
