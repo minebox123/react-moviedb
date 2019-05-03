@@ -572,24 +572,29 @@ footer {
   width: 1200px;
   margin: 0 auto;
 }
+
 .review-list {
   list-style: none;
   background-color: #fff;
   box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.2);
   border: 1px solid #e3e3e3;
 }
+
 .review-list:nth-child(n + 2) {
   margin-bottom: 15px;
 }
+
 .review-list h3 {
   margin-left: 10px;
 }
+
 .review-list p {
   width: 1100px;
 
   margin: 0 auto;
   margin-bottom: 60px;
 }
+
 .review-list a {
   margin-left: 5px;
   text-decoration: none;
@@ -598,23 +603,28 @@ footer {
 .video-list {
   list-style: none;
 }
+
 .video-container {
   width: 1200px;
   margin: 0 auto;
   display: flex;
   overflow: scroll;
 }
+
 .video {
   width: 533.33px;
   height: 300px;
 }
+
 .backdrop-list {
   list-style: none;
 }
+
 .backdrop {
   width: 533.33px;
   height: 300px;
 }
+
 .backdrops-container {
   width: 1200px;
   margin: 0 auto;
@@ -626,29 +636,35 @@ footer {
   width: 200px;
   height: 300px;
 }
+
 .poster-list {
   list-style: none;
   margin-bottom: 10px;
 }
+
 .posters-container {
   display: flex;
   width: 1200px;
   margin: 0 auto;
   overflow: scroll;
 }
+
 .media {
   width: 1200px;
   margin: 0 auto;
 }
+
 .media-links ul li {
   list-style: none;
   display: inline-block;
   margin-left: 3rem;
   cursor: pointer;
 }
+
 .media-links li:nth-child(n + 2) {
   margin-left: 50px;
 }
+
 .media-links {
   display: flex;
   align-items: center;
@@ -658,50 +674,100 @@ footer {
 .actor {
   background-color: #fff;
 }
+
 .actorInfo-container {
   background-color: #fff;
   display: flex;
   width: 1200px;
   margin: 0 auto;
 }
+
 .personalInfo {
   background-color: #f6f6f6;
 }
+
 .personalInfo img {
   border-radius: 5px;
 }
+
 .bio {
   background-color: #f6f6f6;
 }
+
 .actor-social-media li {
   list-style: none;
 }
+
 .actor-social-media li:nth-child(n + 2) {
   margin-left: 20px;
 }
+
 .actor-social-media ul {
   display: flex;
 }
+
 .actor-social-media li img {
   width: 30px;
   height: 30px;
 }
+
 .name-socials {
   display: flex;
   align-items: center;
 }
+
 .home {
   width: 33px;
   margin-left: 20px;
 }
+
 .name-socials li {
   list-style: none;
 }
+
 .name-socials ul {
   display: flex;
   align-items: center;
 }
+
 .name-socials h1 {
   font-size: 2.4rem;
   margin: 0;
+}
+
+.credit-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.credit-list p {
+  width: 600px;
+  margin-left: 10px;
+
+}
+
+.credit-list span {
+
+  margin-right: 5px;
+  color: #000;
+  font-weight: bold
+}
+
+.credit-list a {
+  text-decoration: none;
+}
+
+.combined-credits {
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.2);
+  border: 1px solid #e3e3e3;
+  width: 750px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.mainInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

@@ -27,8 +27,6 @@ class AdditionalActorInfo extends Component {
   }
   render() {
     const { actor } = this.state;
-    console.log(actor);
-
     return (
       <div className="actorInfo-container">
         <section className="personalInfo">
