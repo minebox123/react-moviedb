@@ -33,10 +33,7 @@ const List = props => {
           <h4>Place of Birth</h4>
           <p>{actor.place_of_birth}</p>
         </li>
-        <li>
-          <h4>Official Site</h4>
-          <p>{actor.homepage === null ? "-" : actor.homepage}</p>
-        </li>
+
         {!Array.isArray(actor.also_known_as) ||
         !actor.also_known_as.length ? null : (
           <li>

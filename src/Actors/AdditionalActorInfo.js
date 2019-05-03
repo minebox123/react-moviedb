@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import List from "./List";
+import Socials from "./Socials";
+import home from "../icons/ActorSocialMedia/icon.svg";
+import CombinedCredits from "./CombinedCredits";
 
 class AdditionalActorInfo extends Component {
   state = {
@@ -25,6 +28,7 @@ class AdditionalActorInfo extends Component {
   render() {
     const { actor } = this.state;
     console.log(actor);
+
     return (
       <div className="actorInfo-container">
         <section className="personalInfo">
@@ -41,9 +45,31 @@ class AdditionalActorInfo extends Component {
         </section>
         <section className="mainInfo">
           <div className="bio">
-            <h1>{actor.name}</h1>
+            <div className="name-socials">
+              <h1>{actor.name}</h1>
+              <ul>
+                <li>
+                  <Socials id={actor.id} />
+                </li>
+                {actor.homepage !== null ? (
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={actor.homepage}
+                    >
+                      <img src={home} className="home" alt="home page icon" />
+                    </a>
+                  </li>
+                ) : null}
+              </ul>
+            </div>
+
             <p>{actor.biography}</p>
           </div>
+          <section className="combined-credits">
+            <CombinedCredits id={actor.id} />
+          </section>
         </section>
       </div>
     );

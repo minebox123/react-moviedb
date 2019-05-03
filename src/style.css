@@ -673,3 +673,35 @@ footer {
 .bio {
   background-color: #f6f6f6;
 }
+.actor-social-media li {
+  list-style: none;
+}
+.actor-social-media li:nth-child(n + 2) {
+  margin-left: 20px;
+}
+.actor-social-media ul {
+  display: flex;
+}
+.actor-social-media li img {
+  width: 30px;
+  height: 30px;
+}
+.name-socials {
+  display: flex;
+  align-items: center;
+}
+.home {
+  width: 33px;
+  margin-left: 20px;
+}
+.name-socials li {
+  list-style: none;
+}
+.name-socials ul {
+  display: flex;
+  align-items: center;
+}
+.name-socials h1 {
+  font-size: 2.4rem;
+  margin: 0;
+}
