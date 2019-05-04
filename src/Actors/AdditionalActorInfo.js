@@ -63,7 +63,7 @@ class AdditionalActorInfo extends Component {
           />
           <div className="facts">
             <h2>Personal info</h2>
-            <List actor={actor} />
+            <List actor={actor} id={this.props.id} />
           </div>
         </section>
         <section className="mainInfo">

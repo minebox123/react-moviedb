@@ -1,7 +1,8 @@
 import React from "react";
+import CreditsLength from "./CreditsLength";
 
 const List = props => {
-  const { actor } = props;
+  const { actor, id } = props;
   return (
     <React.Fragment>
       <ul>
@@ -15,7 +16,7 @@ const List = props => {
         </li>
         <li>
           <h4>Known Credits</h4>
-          <p>Number</p>
+          <CreditsLength id={id} />
         </li>
         <li>
           <h4>Birthday</h4>
