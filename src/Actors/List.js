@@ -39,9 +39,11 @@ const List = props => {
           <li>
             <h4>Also known as</h4>
 
-            <ul>
+            <ul className="also-known-as">
               {actor.also_known_as.map((item, index) => (
-                <li key={index}>{item}</li>
+                <li key={index}>
+                  <p>{item}</p>
+                </li>
               ))}
             </ul>
           </li>

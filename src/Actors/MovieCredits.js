@@ -1,30 +1,14 @@
 import React, { Component } from "react";
-import ShowCredits from "./ShowCredits";
 import { Link } from "react-router-dom";
 
-class CombinedCredits extends Component {
+class MovieCredits extends Component {
   state = {
     movieCredits: [],
-    isMovieClicked: true,
-    isShowClicked: false,
-    id: null
+    isLoading: true
   };
 
-  onMovieClick = () => {
-    this.setState({
-      isMovieClicked: true,
-      isShowClicked: false
-    });
-  };
-
-  onShowClick = () => {
-    this.setState({
-      isShowClicked: true,
-      isMovieClicked: false
-    });
-  };
-  componentWillReceiveProps(prevState) {
-    const { id } = prevState;
+  componentDidMount() {
+    const { id } = this.props;
     if (!id) {
       return;
     } else {
@@ -33,8 +17,6 @@ class CombinedCredits extends Component {
       )
         .then(res => res.json())
         .then(data => {
-          console.log(data);
-          const id = data.id;
           const movieCredits = data.cast
             .filter(
               item =>
@@ -64,29 +46,21 @@ class CombinedCredits extends Component {
             });
           this.setState({
             movieCredits,
-            id
+            isLoading: false
           });
         })
         .catch(e => console.log(e));
     }
   }
   render() {
-    const { movieCredits, isShowClicked, isMovieClicked, id } = this.state;
+    const { movieCredits, isLoading } = this.state;
 
     return (
-      <div>
-        <div className="buttons">
-          <button onClick={this.onMovieClick}>Movies</button>
-          <button onClick={this.onShowClick}>TV Shows</button>
-        </div>
-        {isMovieClicked ? (
-          <ul>{movieCredits}</ul>
-        ) : isShowClicked ? (
-          <ShowCredits id={id} />
-        ) : null}
-      </div>
+      <React.Fragment>
+        <ul>{isLoading ? <p>loading</p> : movieCredits}</ul>
+      </React.Fragment>
     );
   }
 }
 
-export default CombinedCredits;
+export default MovieCredits;

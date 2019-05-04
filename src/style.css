@@ -670,13 +670,14 @@ footer {
   align-items: center;
 }
 
-/* ACTOR INFORMATION */
+/*------ACTOR INFORMATION------*/
+
 .actor {
-  background-color: #fff;
+  background-color: #f6f6f6;
 }
 
 .actorInfo-container {
-  background-color: #fff;
+  background-color: #f6f6f6;
   display: flex;
   width: 1200px;
   margin: 0 auto;
@@ -684,6 +685,7 @@ footer {
 
 .personalInfo {
   background-color: #f6f6f6;
+  margin-top: 50px;
 }
 
 .personalInfo img {
@@ -693,7 +695,37 @@ footer {
 .bio {
   background-color: #f6f6f6;
 }
+.bio h2 {
+  padding-left: 40px;
+}
+.biography {
+  line-height: 1.4;
+  padding: 0 60px 80px 40px;
+}
 
+/*----PERSONAL INFO list----*/
+.facts ul li {
+  list-style: none;
+}
+.facts ul li:nth-child(n + 2) {
+  margin-top: 15px;
+}
+.facts ul li {
+  position: relative;
+  right: 40px;
+}
+.facts ul li p {
+  margin: 0;
+}
+.facts li h4 {
+  margin: 0;
+}
+.also-known-as li {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 0.5;
+}
+/*--------------------------*/
 .actor-social-media li {
   list-style: none;
 }
@@ -714,6 +746,9 @@ footer {
 .name-socials {
   display: flex;
   align-items: center;
+}
+.name-socials h1 {
+  padding-left: 40px;
 }
 
 .home {
@@ -744,14 +779,15 @@ footer {
 .credit-list p {
   width: 600px;
   margin-left: 10px;
-
 }
 
 .credit-list span {
-
   margin-right: 5px;
   color: #000;
-  font-weight: bold
+  font-weight: bold;
+}
+.credit-list span:hover {
+  text-decoration: underline;
 }
 
 .credit-list a {
@@ -761,13 +797,80 @@ footer {
 .combined-credits {
   box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.2);
   border: 1px solid #e3e3e3;
-  width: 750px;
+  width: 787px;
   margin-top: 50px;
   margin-bottom: 20px;
+  background-color: #fff;
 }
 
 .mainInfo {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
+}
+.buttons button {
+  font-size: 14px;
+  padding: 5px 8px;
+  float: right;
+
+  cursor: pointer;
+}
+.movieButton {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.showButton {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 50px;
+}
+.acting {
+  margin-right: 32px;
+}
+.showMore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.showMore img {
+  width: 30px;
+  position: relative;
+  top: 20px;
+}
+.showMore img:hover {
+  cursor: pointer;
+}
+.biography-container {
+  position: fixed;
+
+  z-index: 1;
+  max-width: 790px;
+  background-color: #fff;
+}
+.biography-container p {
+  margin: 20px 20px;
+}
+.biography-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.biography-header h3 {
+  margin: 0;
+  margin-left: 20px;
+}
+.biography-header i {
+  margin-right: 20px;
+}
+.biography-header i:hover {
+  cursor: pointer;
+  color: red;
 }

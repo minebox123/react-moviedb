@@ -1,9 +1,16 @@
 import React, { Component } from "react";
 import Slider from "./Slider";
+import { Link } from "react-router-dom";
 
 class NowPlaying extends Component {
   state = {
-    movies: []
+    movies: [],
+    movieId: null
+  };
+  onClick = e => {
+    this.setState({
+      movieId: e.target.id
+    });
   };
 
   componentDidMount() {
@@ -31,10 +38,16 @@ class NowPlaying extends Component {
                     </span>
                   </div>
                 )}
-                <img
-                  src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
-                  alt={item.title}
-                />
+                <Link to={`/movieInfo/${item.id}`}>
+                  <div className="overlay" onClick={this.onClick}>
+                    <img
+                      src={`https://image.tmdb.org/t/p/w500/${
+                        item.poster_path
+                      }`}
+                      alt={item.title}
+                    />
+                  </div>
+                </Link>
               </div>
               <div className="title">
                 <h3>{item.title}</h3>

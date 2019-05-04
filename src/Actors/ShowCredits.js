@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 
 class ShowCredits extends Component {
   state = {
-    showCredits: []
+    showCredits: [],
+    isLoading: true
   };
   componentDidMount() {
     const { id } = this.props;
+
     if (!id) {
       return;
     } else {
@@ -28,7 +30,7 @@ class ShowCredits extends Component {
                   {item.first_air_date.slice(0, 4)}
 
                   <p>
-                    <Link>
+                    <Link to={`/movieInfo/${item.id}`}>
                       <span>{item.name}</span>
                     </Link>
                     {item.character !== "" ? `as ${item.character}` : null}
@@ -37,18 +39,19 @@ class ShowCredits extends Component {
               );
             });
           this.setState({
-            showCredits
+            showCredits,
+            isLoading: false
           });
         })
         .catch(e => console.log(e));
     }
   }
   render() {
-    const { showCredits } = this.state;
+    const { showCredits, isLoading } = this.state;
 
     return (
       <React.Fragment>
-        <ul>{showCredits}</ul>
+        <ul>{isLoading ? <p>loading</p> : showCredits}</ul>
       </React.Fragment>
     );
   }
