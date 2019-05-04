@@ -5,8 +5,10 @@ class MovieInfo extends Component {
   render() {
     const { id } = this.props.match.params;
     return (
-      <div className="actor">
-        <AdditionalActorInfo id={id} />
+      <div className="main-actor">
+        <div className="actor">
+          <AdditionalActorInfo id={id} />
+        </div>
       </div>
     );
   }

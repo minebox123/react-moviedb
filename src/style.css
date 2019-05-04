@@ -849,10 +849,11 @@ footer {
 }
 .biography-container {
   position: fixed;
-
-  z-index: 1;
+  color: #333226;
+  z-index: 10;
   max-width: 790px;
-  background-color: #fff;
+  background-color: #fbf695;
+  border-radius: 5px;
 }
 .biography-container p {
   margin: 20px 20px;
@@ -862,8 +863,10 @@ footer {
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
+  border-bottom: 1.5px solid #c7c98b;
 }
 .biography-header h3 {
+  padding-bottom: 10px;
   margin: 0;
   margin-left: 20px;
 }
