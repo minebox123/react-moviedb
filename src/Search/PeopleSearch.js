@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import noimage from "../icons/noimage.svg";
+import avatar from "../icons/avatar.svg";
 
 class MoiveSearch extends Component {
   state = {
@@ -12,7 +12,7 @@ class MoiveSearch extends Component {
       return;
     } else {
       fetch(
-        `https://api.themoviedb.org/3/search/tv?api_key=81f382d33088c6d52099a62eab51d967&language=en-US&query=${query}&page=1&include_adult=false`
+        `https://api.themoviedb.org/3/search/person?api_key=81f382d33088c6d52099a62eab51d967&language=en-US&query=${query}&page=1&include_adult=false`
       )
         .then(res => res.json())
         .then(data =>
@@ -24,36 +24,39 @@ class MoiveSearch extends Component {
   }
   render() {
     const { results } = this.state;
+    console.log(results);
     return (
-      <div className="search-results-movie">
+      <div className="search-results-people">
         <ul>
           {results.map(item => {
             return (
               <li key={item.id}>
-                {item.poster_path !== null ? (
+                {item.profile_path !== null ? (
                   <img
-                    src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
+                    src={`https://image.tmdb.org/t/p/w500${item.profile_path}`}
                     alt={item.title}
                     width="185px"
-                    height="278px"
+                    height="277.50px"
                   />
                 ) : (
                   <div className="no-image">
-                    <img src={noimage} alt={item.title} />
+                    <img src={avatar} alt={item.title} />
                   </div>
                 )}
-                <div className="movie-text-container">
-                  <div className="movie-desription">
-                    <h3>{item.name}</h3>
-                    <span>Release date: {item.first_air_date}</span>
-
-                    {item.overview.length > 300 ? (
-                      <p>{item.overview.slice(0, 250)}...</p>
-                    ) : (
-                      <p>{item.overview}</p>
-                    )}
+                <div className="person-description">
+                  <h3>{item.name}</h3>
+                  <div className="known-for">
+                    <ul>
+                      <h3>Known for:</h3>
+                      {item.known_for.map(item => {
+                        return (
+                          <li key={item.id}>
+                            <p>{item.title}</p>
+                          </li>
+                        );
+                      })}
+                    </ul>
                   </div>
-
                   <p className="show-more">Show more</p>
                 </div>
               </li>

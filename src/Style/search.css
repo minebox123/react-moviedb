@@ -8,18 +8,121 @@
     display: flex;
     width: 1200px;
     margin: 0 auto;
+    justify-content: space-between;
+}
+
+.search-results-container ul {
+    list-style: none;
 }
 
 .search-results-movie ul li {
     display: flex;
     box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.2);
+    width: 790px;
 }
 
 .search-results-movie li:nth-child(n + 2) {
-    margin-top: 20px;
+    margin-top: 30px;
+}
+
+.search-options h3 {
+    cursor: pointer;
+    border-top: 2px solid #000;
+    margin: 0;
+    padding: 10px 0;
+    width: 15rem;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.search-options li:last-child {
+    border-bottom: 2px solid #000;
+}
+
+.movie-desription h3,
+span {
+    padding-top: 25px;
+    padding-left: 20px;
+    margin: 0;
+
 }
 
 .movie-desription p {
     width: 600px;
     padding: 0 20px;
+}
+
+.movie-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.show-more {
+    border-top: 1px solid #b4b4b4;
+    padding-top: 10px;
+    padding-left: 20px;
+
+    color: #000;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.show-more:hover {
+    color: #b4b4b4;
+
+}
+
+.no-image {
+    width: 185px;
+    height: 278px;
+    background-color: #e9e9e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-image img {
+    width: 80px;
+
+}
+
+.search-results-people ul li {
+    display: flex;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.2);
+
+}
+
+.search-results-people li:nth-child(n + 2) {
+    margin-top: 30px;
+}
+
+.person-description h3 {
+    padding-left: 20px;
+}
+
+.person-description ul {
+
+    padding: 0;
+}
+
+.person-description ul li {
+    box-shadow: none;
+    display: inline-block;
+
+}
+
+.person-description li:nth-child(n+2) {
+    margin-left: 10px;
+}
+
+.known-for ul {
+    display: flex;
+    align-items: center;
+
+}
+
+
+.known-for li {
+    padding-bottom: 27px;
 }
