@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import AdditionalActorInfo from "./AdditionalActorInfo";
 
-class MovieInfo extends Component {
+class ActorInfo extends Component {
   render() {
     const { id } = this.props.match.params;
     return (
@@ -14,4 +14,4 @@ class MovieInfo extends Component {
   }
 }
 
-export default MovieInfo;
+export default ActorInfo;

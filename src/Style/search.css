@@ -1,0 +1,25 @@
+.main-search-results-container {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.search-results-container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.search-results-movie ul li {
+    display: flex;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.search-results-movie li:nth-child(n + 2) {
+    margin-top: 20px;
+}
+
+.movie-desription p {
+    width: 600px;
+    padding: 0 20px;
+}

@@ -4,6 +4,7 @@ import MainContainer from "./MainContainer";
 import Footer from "./layout/Footer";
 import ActorInfo from "./Actors/ActorInfo";
 import MovieInfo from "./MovieInfo";
+import SearchResults from "./Search/SearchResults";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./JavaScript/index.js";
 import "./style.css";
@@ -20,6 +21,11 @@ class App extends Component {
               <Route exact path="/" component={MainContainer} />
               <Route exact path="/movieInfo/:id" component={MovieInfo} />
               <Route exact path="/actorInfo/:id" component={ActorInfo} />
+              <Route
+                exact
+                path="/results/:userInput"
+                component={SearchResults}
+              />
             </Switch>
           </div>
           <Footer />

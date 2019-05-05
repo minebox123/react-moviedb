@@ -7,13 +7,25 @@ import "../style.css";
 class Header extends Component {
   state = {
     isClicked: false,
-    width: window.innerWidth
+    width: window.innerWidth,
+    search: ""
   };
 
   onClick = () =>
     this.setState({
       isClicked: !this.state.isClicked
     });
+
+  onChange = e =>
+    this.setState({
+      search: e.target.value
+    });
+
+  onSearchClick = () => {
+    this.setState({
+      search: ""
+    });
+  };
 
   componentDidMount() {
     window.addEventListener("resize", this.updateWidth);
@@ -66,12 +78,19 @@ class Header extends Component {
                 ) : (
                   <div className="search-box">
                     <i className="fas fa-search" onClick={this.onClick} />
-                    <div className="input-box">
-                      <input type="text" placeholder="Search..." />
-                      <button type="submit">
-                        <i className="fas fa-arrow-right" />
-                      </button>
-                    </div>
+                    <Link to={`/results/${this.state.search}`}>
+                      <div className="input-box">
+                        <input
+                          type="text"
+                          placeholder="Search..."
+                          onChange={this.onChange}
+                          value={this.state.search}
+                        />
+                        <button type="submit" onClick={this.onSearchClick}>
+                          <i className="fas fa-arrow-right" />
+                        </button>
+                      </div>
+                    </Link>
                   </div>
                 )}
               </li>
