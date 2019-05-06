@@ -54,7 +54,7 @@ class MoiveSearch extends Component {
                           return (
                             <li key={item.id}>
                               <Link to={`/movieInfo/${item.id}`}>
-                                <p>{item.title}</p>
+                                <p>{item.title || item.name}</p>
                               </Link>
                             </li>
                           );

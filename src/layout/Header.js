@@ -21,7 +21,7 @@ class Header extends Component {
       search: e.target.value
     });
 
-  onSearchClick = () => {
+  onSearchClick = e => {
     this.setState({
       search: ""
     });
@@ -78,19 +78,20 @@ class Header extends Component {
                 ) : (
                   <div className="search-box">
                     <i className="fas fa-search" onClick={this.onClick} />
-                    <Link to={`/results/${this.state.search}`}>
-                      <div className="input-box">
-                        <input
-                          type="text"
-                          placeholder="Search..."
-                          onChange={this.onChange}
-                          value={this.state.search}
-                        />
+
+                    <div className="input-box">
+                      <input
+                        type="text"
+                        placeholder="Search..."
+                        onChange={this.onChange}
+                        value={this.state.search}
+                      />
+                      <Link to={`/results/${this.state.search}`}>
                         <button type="submit" onClick={this.onSearchClick}>
                           <i className="fas fa-arrow-right" />
                         </button>
-                      </div>
-                    </Link>
+                      </Link>
+                    </div>
                   </div>
                 )}
               </li>

@@ -40,7 +40,7 @@ class MoiveSearch extends Component {
                   />
                 ) : (
                   <div className="no-image">
-                    <img src={noimage} alt={item.title} />
+                    <img src={noimage} alt={item.title} width="80px" />
                   </div>
                 )}
                 <div className="movie-text-container">
