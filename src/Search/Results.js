@@ -41,15 +41,34 @@ class Results extends Component {
         <section className="search-options">
           <nav>
             <ul>
-              <li>
-                <h3 onClick={this.onMovieClick}>Movies</h3>
-              </li>
-              <li>
-                <h3 onClick={this.onShowClick}>TV Shows</h3>
-              </li>
-              <li>
-                <h3 onClick={this.onPersonClick}>People</h3>
-              </li>
+              {isMovieClicked ? (
+                <li style={{ color: "#21D07A" }}>
+                  <h3 onClick={this.onMovieClick}>Movies</h3>
+                </li>
+              ) : (
+                <li style={{ color: "#000" }}>
+                  <h3 onClick={this.onMovieClick}>Movies</h3>
+                </li>
+              )}
+
+              {isShowClicked ? (
+                <li style={{ color: "#21D07A" }}>
+                  <h3 onClick={this.onShowClick}>TV Shows</h3>
+                </li>
+              ) : (
+                <li style={{ color: "#000" }}>
+                  <h3 onClick={this.onShowClick}>TV Shows</h3>
+                </li>
+              )}
+              {isPersonClicked ? (
+                <li style={{ color: "#21D07A" }}>
+                  <h3 onClick={this.onPersonClick}>People</h3>
+                </li>
+              ) : (
+                <li style={{ color: "#000" }}>
+                  <h3 onClick={this.onPersonClick}>People</h3>
+                </li>
+              )}
             </ul>
           </nav>
         </section>

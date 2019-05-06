@@ -39,11 +39,11 @@ class MoiveSearch extends Component {
                   />
                 ) : (
                   <div className="no-image">
-                    <img src={noimage} alt={item.title} />
+                    <img src={noimage} alt={item.title} width="100px" />
                   </div>
                 )}
                 <div className="movie-text-container">
-                  <div className="movie-desription">
+                  <div className="movie-description">
                     <h3>{item.name}</h3>
                     <span>Release date: {item.first_air_date}</span>
 

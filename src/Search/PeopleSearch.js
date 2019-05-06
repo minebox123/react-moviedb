@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import avatar from "../icons/avatar.svg";
+import { Link } from "react-router-dom";
 
 class MoiveSearch extends Component {
   state = {
@@ -39,25 +40,31 @@ class MoiveSearch extends Component {
                     height="277.50px"
                   />
                 ) : (
-                  <div className="no-image">
+                  <div className="no-image-person">
                     <img src={avatar} alt={item.title} />
                   </div>
                 )}
                 <div className="person-description">
-                  <h3>{item.name}</h3>
-                  <div className="known-for">
-                    <ul>
-                      <h3>Known for:</h3>
-                      {item.known_for.map(item => {
-                        return (
-                          <li key={item.id}>
-                            <p>{item.title}</p>
-                          </li>
-                        );
-                      })}
-                    </ul>
+                  <div className="person-description-container">
+                    <h3>{item.name}</h3>
+                    <div className="known-for">
+                      <ul>
+                        <h3>Known for:</h3>
+                        {item.known_for.map(item => {
+                          return (
+                            <li key={item.id}>
+                              <Link to={`/movieInfo/${item.id}`}>
+                                <p>{item.title}</p>
+                              </Link>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
                   </div>
-                  <p className="show-more">Show more</p>
+                  <Link to={`/actorInfo/${item.id}`}>
+                    <p className="show-more-person">Show more</p>
+                  </Link>
                 </div>
               </li>
             );
