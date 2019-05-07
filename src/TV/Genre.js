@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class Genre extends Component {
+class Genre extends Component {
   state = {
     id: this.props.genresIds,
     name: ""
@@ -12,7 +12,7 @@ export default class Genre extends Component {
     )
       .then(res => res.json())
       .then(data => {
-        const genre = data.genres.map(item => {
+        let genre = data.genres.map(item => {
           if (this.state.id === item.id) {
             return item.name;
           } else {
@@ -31,3 +31,5 @@ export default class Genre extends Component {
     return <div className="genre">{name} | Rating</div>;
   }
 }
+
+export default Genre;
