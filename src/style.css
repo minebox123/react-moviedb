@@ -159,6 +159,7 @@ body {
   color: #fff;
   position: relative;
   bottom: 15rem;
+  width: 0;
 }
 
 /* NOW PLAYING SECTION */
@@ -212,6 +213,7 @@ body {
   z-index: 1;
   color: #fff;
   cursor: pointer;
+  width: 0;
 }
 
 .vote {

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Genre from "./Genre";
 import Slider from "./Slider";
-import "../Style/tv.css";
 
 class TVtrending extends Component {
   state = {
@@ -26,7 +25,6 @@ class TVtrending extends Component {
   }
   render() {
     const shows = this.state.show.map(item => {
-      console.log(item);
       return (
         <li className="tv-banner" key={item.id}>
           <img
