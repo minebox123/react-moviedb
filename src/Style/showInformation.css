@@ -1,0 +1,51 @@
+.review-container {
+    border-bottom: 1px solid #d7d7d7;
+    padding-bottom: 3rem;
+    padding-top: 2rem;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.social h3 {
+    margin-left: 5rem;
+}
+
+.social span {
+    color: rgb(145, 145, 145);
+}
+
+.social i {
+    margin-left: 5px;
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+}
+
+.video-list:nth-child(n + 2) {
+    margin-left: 10px;
+}
+
+.media-links {
+    margin-top: 2rem;
+}
+
+.cast {
+    border-bottom: 1px solid #d7d7d7;
+    padding-bottom: 3rem;
+}
+
+.user-score span {
+    margin: 0;
+    padding: 0;
+}
+
+.media-links h3 {
+    margin: 0;
+}
+
+.title-section {
+    margin-top: 70px;
+}

@@ -8,6 +8,12 @@ class Review extends Component {
     id: this.props.id
   };
 
+  onArrowClick = () => {
+    this.setState({
+      isHidden: !this.state.isHidden
+    });
+  };
+
   componentDidMount() {
     const { id } = this.state;
     fetch(
@@ -38,12 +44,22 @@ class Review extends Component {
       });
   }
   render() {
-    const { reviews } = this.state;
+    const { reviews, isHidden } = this.state;
 
     return (
       <div className="review-container">
-        <h2>Social</h2>
-        {reviews}
+        <div className="social">
+          <h2>Social</h2>
+          <h3>
+            Reviews{" "}
+            <span>
+              {reviews.length}
+              <i className="fas fa-caret-down" onClick={this.onArrowClick} />
+            </span>
+          </h3>
+        </div>
+
+        {!isHidden ? reviews.slice(0, 1) : reviews}
       </div>
     );
   }

@@ -1,20 +1,27 @@
 body {
   margin: 0;
-  background-color: #384350;
   font-family: Arial, Helvetica, sans-serif;
+  background: #0f0c29;
+  background: -webkit-linear-gradient(to top, #24243e, #302b63, #0f0c29);
+  background: linear-gradient(to top, #24243e, #302b63, #0f0c29);
+
 }
 
 * {
   box-sizing: border-box;
+
 }
 
 /*  HEADER SECTION*/
 .header {
   width: 100%;
-  background-color: #232f3d;
+  background: #0f0c29;
+  margin-bottom: 2rem;
   height: 70px;
   display: flex;
   align-items: center;
+  position: fixed;
+  z-index: 999;
 }
 
 .content {
@@ -88,6 +95,7 @@ body {
   width: 1200px;
   margin: 0 auto;
   overflow: hidden;
+  border-bottom: 1px solid #505089;
 }
 
 .poster img {
@@ -173,7 +181,9 @@ body {
 .now-playing {
   width: 1200px;
   margin: 0 auto;
+  margin-top: 3rem;
   overflow: hidden;
+  border-bottom: 1px solid #505089;
 }
 
 .now-playing-carousel {
@@ -188,6 +198,7 @@ body {
   margin: 0 auto;
   overflow: hidden;
   display: flex;
+  margin-top: 100px;
 }
 
 .slider-wrapper {
@@ -277,7 +288,9 @@ body {
 
 .trailers {
   margin: 0 auto;
+  margin-top: 3rem;
   width: 1200px;
+  border-bottom: 1px solid #505089;
 }
 
 .trailer-carousel {
@@ -305,7 +318,9 @@ body {
 .top-rated {
   width: 1200px;
   margin: 0 auto;
+  margin-top: 3rem;
   overflow: hidden;
+
 }
 
 .top-rated-carousel {
@@ -314,77 +329,7 @@ body {
   justify-content: space-between;
 }
 
-/*  FOOTER SECTION */
-footer {
-  background-color: #081c24;
-  display: flex;
-  position: relative;
-  margin-top: 100px;
-}
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.movieDB-logo {
-  width: 200px;
-  margin-right: 20px;
-}
-
-.movieDB-links {
-  margin-bottom: 74px;
-  margin-top: 71px;
-}
-
-.facebook,
-.twitter,
-.website {
-  width: 40px;
-  margin-right: 20px;
-}
-
-.information {
-  color: #e0e0e0;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-bottom: 1.2rem;
-  margin-left: 20px;
-}
-
-.inner-links {
-  display: flex;
-  align-items: center;
-}
-
-.website-pages li {
-  display: inline-block;
-}
-
-.website-pages li:nth-child(n + 2) {
-  margin-left: 25px;
-}
-
-.social-media {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2rem;
-}
-
-.personal-info {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  line-height: 2;
-  font-size: 16px;
-}
-
-.personal-info a {
-  text-decoration: none;
-  color: #e0e0e0;
-}
 
 /* SEARCH BOX */
 .search-box {
@@ -791,12 +736,19 @@ footer {
   list-style: none;
   display: flex;
   align-items: center;
+  padding-right: 10px;
+}
+
+.credit-list:nth-child(n + 2) {
+  border-top: 1px solid #e7e7e7;
 }
 
 .credit-list p {
   width: 600px;
-  margin-left: 10px;
+  margin-left: 40px;
+
 }
+
 
 .credit-list span {
   margin-right: 5px;
@@ -908,4 +860,98 @@ footer {
 .biography-header i:hover {
   cursor: pointer;
   color: red;
+}
+
+.movieInfo-container {
+  padding-bottom: 100px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*  FOOTER SECTION */
+footer {
+  background-color: #081c24;
+  display: flex;
+
+  width: 100%;
+
+
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.movieDB-logo {
+  width: 200px;
+  margin-right: 20px;
+}
+
+.movieDB-links {
+  margin-bottom: 74px;
+  margin-top: 71px;
+}
+
+.facebook,
+.twitter,
+.website {
+  width: 40px;
+  margin-right: 20px;
+}
+
+.information {
+  color: #e0e0e0;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 1.2rem;
+  margin-left: 20px;
+}
+
+.inner-links {
+  display: flex;
+  align-items: center;
+}
+
+.website-pages li {
+  display: inline-block;
+}
+
+.website-pages li:nth-child(n + 2) {
+  margin-left: 25px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.personal-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+  font-size: 16px;
+}
+
+.personal-info a {
+  text-decoration: none;
+  color: #e0e0e0;
+}
+
+
+.main-container {
+  min-height: 80vh;
+}
+
+.actor {
+  min-height: 80vh;
+  margin-top: 70px;
 }

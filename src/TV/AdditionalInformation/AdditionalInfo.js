@@ -6,13 +6,41 @@ import Cast from "./Cast";
 import Videos from "./Videos";
 import Backdrops from "./Backdrops";
 import Posters from "./Posters";
+import "../../Style/showInformation.css";
 
 // Create a page with some information about a tv show.
-// One needs to load id from a movie clicking on a poster.
+// One needs to load id from a tv show  by clicking on a poster.
 class AdditionalInfo extends Component {
   state = {
     movie: [],
-    isLoading: true
+    isLoading: true,
+    isVideo: true,
+    isBackdrop: false,
+    isPoster: false
+  };
+
+  onVideoClick = () => {
+    this.setState({
+      isVideo: true,
+      isBackdrop: false,
+      isPoster: false
+    });
+  };
+
+  onBackdropClick = () => {
+    this.setState({
+      isVideo: false,
+      isBackdrop: true,
+      isPoster: false
+    });
+  };
+
+  onPosterClick = () => {
+    this.setState({
+      isVideo: false,
+      isBackdrop: false,
+      isPoster: true
+    });
   };
 
   componentDidMount() {
@@ -32,7 +60,7 @@ class AdditionalInfo extends Component {
       );
   }
   render() {
-    const { movie, isLoading } = this.state;
+    const { movie, isLoading, isVideo, isBackdrop, isPoster } = this.state;
 
     const style = {
       backgroundImage: `url(https://image.tmdb.org/t/p/w1280/${
@@ -62,7 +90,7 @@ class AdditionalInfo extends Component {
                     />
                   </div>
                   <div className="movieInfo-title">
-                    <h1>{movie.title}</h1>
+                    <h1>{movie.name}</h1>
                     <div className="user-score">
                       <p>User Score</p>
                       <span>{movie.vote_average}</span>
@@ -105,14 +133,45 @@ class AdditionalInfo extends Component {
               <div className="media-links">
                 <h2>Media</h2>
                 <ul>
-                  <li>Videos</li>
-                  <li>Backdrops</li>
-                  <li>Posters</li>
+                  {isVideo ? (
+                    <li
+                      style={{ borderBottom: "4px solid #1586B5" }}
+                      onClick={this.onVideoClick}
+                    >
+                      Videos
+                    </li>
+                  ) : (
+                    <li onClick={this.onVideoClick}>Videos</li>
+                  )}
+                  {isBackdrop ? (
+                    <li
+                      style={{ borderBottom: "4px solid #1586b5" }}
+                      onClick={this.onBackdropClick}
+                    >
+                      Backdrops
+                    </li>
+                  ) : (
+                    <li onClick={this.onBackdropClick}>Backdrops</li>
+                  )}
+                  {isPoster ? (
+                    <li
+                      style={{ borderBottom: "4px solid #1586b5" }}
+                      onClick={this.onPosterClick}
+                    >
+                      Posters
+                    </li>
+                  ) : (
+                    <li onClick={this.onPosterClick}>Posters</li>
+                  )}
                 </ul>
               </div>
-              <Videos id={movie.id} />
-              <Backdrops id={movie.id} />
-              <Posters id={movie.id} />
+              {isVideo ? (
+                <Videos id={movie.id} />
+              ) : isBackdrop ? (
+                <Backdrops id={movie.id} />
+              ) : isPoster ? (
+                <Posters id={movie.id} />
+              ) : null}
             </section>
           </React.Fragment>
         )}
