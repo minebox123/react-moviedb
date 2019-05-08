@@ -4,6 +4,7 @@ import MainContainer from "./MainContainer";
 import Footer from "./layout/Footer";
 import ActorInfo from "./Actors/ActorInfo";
 import MovieInfo from "./MovieInfo";
+import ShowInfo from "./TV/AdditionalInformation/ShowInfo";
 import SearchResults from "./Search/SearchResults";
 import PeopleContainer from "./People/PeopleContainer";
 import TV from "./TV/TV";
@@ -24,6 +25,7 @@ class App extends Component {
               <Route exact path="/tv" component={TV} />
               <Route exacr path="/people" component={PeopleContainer} />
               <Route exact path="/movieInfo/:id" component={MovieInfo} />
+              <Route exact path="/showInfo/:id" component={ShowInfo} />
               <Route exact path="/actorInfo/:id" component={ActorInfo} />
               <Route
                 exact

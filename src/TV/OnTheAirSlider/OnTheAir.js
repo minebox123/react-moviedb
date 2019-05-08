@@ -1,15 +1,11 @@
 import React, { Component } from "react";
 import Slider from "./Slider";
+import { Link } from "react-router-dom";
 
 export default class OnTheAir extends Component {
   state = {
     shows: [],
     showId: null
-  };
-  onClick = e => {
-    this.setState({
-      showId: e.target.id
-    });
   };
 
   componentDidMount() {
@@ -44,13 +40,14 @@ export default class OnTheAir extends Component {
                 </span>
               </div>
             )}
-
-            <div className="overlay" onClick={this.onClick}>
-              <img
-                src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
-                alt={item.name}
-              />
-            </div>
+            <Link to={`/showInfo/${item.id}`}>
+              <div className="overlay" onClick={this.onClick}>
+                <img
+                  src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
+                  alt={item.name}
+                />
+              </div>
+            </Link>
           </div>
           <div className="title">
             <h3>{item.name}</h3>

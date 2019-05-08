@@ -55,7 +55,7 @@ class TopRated extends Component {
         </div>
       );
     });
-    console.log(show);
+
     return (
       <div className="on-the-air">
         <h2>Top Rated</h2>

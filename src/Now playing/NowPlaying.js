@@ -7,11 +7,6 @@ class NowPlaying extends Component {
     movies: [],
     movieId: null
   };
-  onClick = e => {
-    this.setState({
-      movieId: e.target.id
-    });
-  };
 
   componentDidMount() {
     fetch(
