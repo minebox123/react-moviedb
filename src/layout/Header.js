@@ -71,6 +71,11 @@ class Header extends Component {
                 </Link>
               </li>
               <li>
+                <Link to="/login" className="login">
+                  Login
+                </Link>
+              </li>
+              <li>
                 {!isClicked ? (
                   <div className="search-box">
                     <i className="fas fa-search" onClick={this.onClick} />

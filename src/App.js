@@ -7,6 +7,7 @@ import MovieInfo from "./MovieInfo";
 import ShowInfo from "./TV/AdditionalInformation/ShowInfo";
 import SearchResults from "./Search/SearchResults";
 import PeopleContainer from "./People/PeopleContainer";
+import Login from "./Sessions/Login";
 import TV from "./TV/TV";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./JavaScript/index.js";
@@ -23,7 +24,8 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={MainContainer} />
               <Route exact path="/tv" component={TV} />
-              <Route exacr path="/people" component={PeopleContainer} />
+              <Route exact path="/people" component={PeopleContainer} />
+              <Route exact path="/login" component={Login} />
               <Route exact path="/movieInfo/:id" component={MovieInfo} />
               <Route exact path="/showInfo/:id" component={ShowInfo} />
               <Route exact path="/actorInfo/:id" component={ActorInfo} />
