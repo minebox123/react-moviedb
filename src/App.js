@@ -9,6 +9,7 @@ import SearchResults from "./Search/SearchResults";
 import PeopleContainer from "./People/PeopleContainer";
 import Login from "./Sessions/Login";
 import TV from "./TV/TV";
+import Guest from "./Sessions/Guest";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./JavaScript/index.js";
 import "./style.css";
@@ -34,6 +35,7 @@ class App extends Component {
                 path="/results/:userInput"
                 component={SearchResults}
               />
+              <Route exact path="/guestPage" component={Guest} />
             </Switch>
           </div>
           <Footer />

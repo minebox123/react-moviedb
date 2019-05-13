@@ -14,7 +14,7 @@ class Login extends Component {
     });
   };
 
-  onSubmit = e => {
+  onButtonClick = e => {
     e.preventDefault();
   };
 
@@ -63,7 +63,7 @@ class Login extends Component {
               <button
                 type="submit"
                 className="log-button"
-                onSubmit={this.onSubmit}
+                onClick={this.onButtonClick}
               >
                 LOGIN
               </button>
