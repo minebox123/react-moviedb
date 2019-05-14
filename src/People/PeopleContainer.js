@@ -20,7 +20,6 @@ class PeopleContainer extends Component {
   }
   render() {
     const { people } = this.state;
-    console.log(people);
     return (
       <div className="people">
         <div className="people-container">

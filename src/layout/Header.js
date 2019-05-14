@@ -71,7 +71,7 @@ class Header extends Component {
                 </Link>
               </li>
               <li>
-                <Link to="/login" className="login">
+                <Link to="/login" className="link">
                   Login
                 </Link>
               </li>

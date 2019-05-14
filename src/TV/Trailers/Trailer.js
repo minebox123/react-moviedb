@@ -22,7 +22,7 @@ class Trailer extends Component {
     const showArr = this.state.popularShow.slice(0, 5).map(item => {
       return <Video id={item.id} key={item.id} />;
     });
-    console.log(showArr);
+
     return (
       <div className="trailers">
         <h1>Trailers</h1>

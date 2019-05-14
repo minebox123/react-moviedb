@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Slider from "./Slider";
+import { Link } from "react-router-dom";
 import noimage from "../../icons/noimage.svg";
 
 export default class AiringToday extends Component {
@@ -38,19 +39,20 @@ export default class AiringToday extends Component {
                 </span>
               </div>
             )}
-
-            <div className="overlay" onClick={this.onClick}>
-              {item.poster_path !== null ? (
-                <img
-                  src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
-                  alt={item.name}
-                />
-              ) : (
-                <div className="no-show-image">
-                  <img src={noimage} alt={item.name} />
-                </div>
-              )}
-            </div>
+            <Link to={`/showInfo/${item.id}`}>
+              <div className="overlay" onClick={this.onClick}>
+                {item.poster_path !== null ? (
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
+                    alt={item.name}
+                  />
+                ) : (
+                  <div className="no-show-image">
+                    <img src={noimage} alt={item.name} />
+                  </div>
+                )}
+              </div>
+            </Link>
           </div>
           <div className="title">
             <h3>{item.name}</h3>

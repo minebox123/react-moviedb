@@ -99,7 +99,7 @@ class AdditionalInfo extends Component {
                       <p>{movie.overview}</p>
                     </div>
                     <div className="small-container">
-                      <div className="release-date">
+                      <div className="release-dates">
                         <h3>Release date</h3>
                         <p>{movie.release_date}</p>
                       </div>

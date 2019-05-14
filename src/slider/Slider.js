@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Slide from "./Slide";
-import { LeftArrow, RightArrow } from "./Arrows";
+// import { LeftArrow, RightArrow } from "./Arrows";
 
 export default class Slider extends Component {
   state = {
@@ -15,6 +15,7 @@ export default class Slider extends Component {
         translateValue: 0
       });
     }
+
     this.setState(prevState => ({
       currentIndex: prevState.currentIndex + 1,
       translateValue: prevState.translateValue - this.slideWidth()
@@ -57,8 +58,8 @@ export default class Slider extends Component {
           ))}
         </div>
 
-        <LeftArrow prevPic={this.prevPic} />
-        <RightArrow nextPic={this.nextPic} />
+        {/* <LeftArrow prevPic={this.prevPic} />
+        <RightArrow nextPic={this.nextPic} /> */}
       </React.Fragment>
     );
   }

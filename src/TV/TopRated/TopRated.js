@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Slider from "./Slider";
+import { Link } from "react-router-dom";
 
 class TopRated extends Component {
   state = {
@@ -18,7 +19,6 @@ class TopRated extends Component {
       );
   }
   render() {
-    console.log(this.state.show);
     const show = this.state.show.map(item => {
       return (
         <div className="movie-container" key={item.id}>
@@ -38,14 +38,16 @@ class TopRated extends Component {
                 </span>
               </div>
             )}
-
-            <div className="overlay" onClick={this.onClick}>
-              <img
-                src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
-                alt={item.name}
-              />
-            </div>
+            <Link to={`/showInfo/${item.id}`}>
+              <div className="overlay" onClick={this.onClick}>
+                <img
+                  src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
+                  alt={item.name}
+                />
+              </div>
+            </Link>
           </div>
+
           <div className="title">
             <h3>{item.name}</h3>
           </div>

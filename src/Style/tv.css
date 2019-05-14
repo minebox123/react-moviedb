@@ -23,6 +23,10 @@
     overflow: hidden;
 }
 
+.on-the-air h2 {
+    color: #e0e0e0;
+}
+
 .on-air-right {
     float: right;
     position: relative;
