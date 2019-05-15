@@ -118,9 +118,21 @@ class Header extends Component {
                 <div>
                   <div>
                     <ul>
-                      <li>Movies</li>
-                      <li>TV Shows</li>
-                      <li>People</li>
+                      <li>
+                        <Link to="/" className="link">
+                          Movies
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/tv" className="link">
+                          TV Shows
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/people" className="link">
+                          People
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                 </div>

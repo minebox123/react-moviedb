@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Slide from "./Slide";
-// import { LeftArrow, RightArrow } from "./Arrows";
 
 export default class Slider extends Component {
   state = {
@@ -8,37 +7,21 @@ export default class Slider extends Component {
     translateValue: 0
   };
 
-  nextPic = () => {
-    if (this.state.currentIndex === this.props.trends.length - 1) {
-      return this.setState({
-        currentIndex: 0,
-        translateValue: 0
-      });
-    }
+  componentDidMount() {
+    setInterval(() => {
+      if (this.state.currentIndex === this.props.trends.length - 1) {
+        return this.setState({
+          currentIndex: 0,
+          translateValue: 0
+        });
+      }
 
-    this.setState(prevState => ({
-      currentIndex: prevState.currentIndex + 1,
-      translateValue: prevState.translateValue - this.slideWidth()
-    }));
-  };
-
-  prevPic = () => {
-    if (this.state.currentIndex === this.props.trends.length + 1) {
-      return this.setState({
-        currentIndex: 0,
-        translateValue: 0
-      });
-    } else if (this.state.currentIndex === 0) {
-      return this.setState({
-        currentIndex: 0,
-        translateValue: 0
-      });
-    }
-    this.setState(prevState => ({
-      currentIndex: prevState.currentIndex - 1,
-      translateValue: prevState.translateValue + this.slideWidth()
-    }));
-  };
+      this.setState(prevState => ({
+        currentIndex: prevState.currentIndex + 1,
+        translateValue: prevState.translateValue - this.slideWidth()
+      }));
+    }, 4000);
+  }
 
   slideWidth = () => {
     return document.querySelector(".slide").clientWidth;
@@ -50,16 +33,13 @@ export default class Slider extends Component {
           className="slider-wrapper"
           style={{
             transform: `translateX(${this.state.translateValue}px)`,
-            transition: "transform ease-out 0.45s"
+            transition: "transform  ease-out 2s"
           }}
         >
           {this.props.trends.map((item, i) => (
             <Slide key={i} movie={item} />
           ))}
         </div>
-
-        {/* <LeftArrow prevPic={this.prevPic} />
-        <RightArrow nextPic={this.nextPic} /> */}
       </React.Fragment>
     );
   }

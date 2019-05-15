@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Genre from "./Genre";
 import Slider from "./Slider";
+import { Link } from "react-router-dom";
 
 class TVtrending extends Component {
   state = {
@@ -24,14 +25,15 @@ class TVtrending extends Component {
     }
   }
   render() {
-    const shows = this.state.show.map(item => {
+    const shows = this.state.show.slice(0, 5).map(item => {
       return (
         <li className="tv-banner" key={item.id}>
-          <img
-            src={`https://image.tmdb.org/t/p/w1280/${item.backdrop_path}`}
-            alt={item.name}
-          />
-
+          <Link to={`/showInfo/${item.id}`}>
+            <img
+              src={`https://image.tmdb.org/t/p/w1280/${item.backdrop_path}`}
+              alt={item.name}
+            />
+          </Link>
           <div className="inf">
             <h3>TRENDING</h3>
             <div className="title">

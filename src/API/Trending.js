@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Genre from "./Genre";
 import Slider from "../slider/Slider";
+import { Link } from "react-router-dom";
 
 class Trending extends Component {
   state = {
@@ -13,13 +14,15 @@ class Trending extends Component {
     )
       .then(res => res.json())
       .then(data => {
-        const movies = data.results.map(item => {
+        const movies = data.results.slice(0, 5).map(item => {
           return (
             <div className="banner" key={item.id}>
-              <img
-                src={`https://image.tmdb.org/t/p/w1280/${item.backdrop_path}`}
-                alt={item.title}
-              />
+              <Link to={`/movieInfo/${item.id}`}>
+                <img
+                  src={`https://image.tmdb.org/t/p/w1280/${item.backdrop_path}`}
+                  alt={item.title}
+                />
+              </Link>
 
               <div className="inf">
                 <h3>TRENDING</h3>

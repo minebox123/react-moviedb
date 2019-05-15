@@ -165,3 +165,50 @@
     list-style: none;
     line-height: 2;
 }
+
+
+/*  WIDTH < 400px*/
+
+@media screen and (max-width: 420px) {
+
+    .people-container ul {
+        justify-content: space-around;
+    }
+
+    .people-container li {
+        width: 152px;
+    }
+
+    .people-container h2 {
+        text-align: center;
+    }
+
+    .people-container ul li img {
+        width: 150px;
+        height: auto;
+    }
+
+    .known {
+        display: none;
+    }
+
+    .person-name h3 {
+        margin: 5px 0;
+
+    }
+
+    /* FOOTER */
+    .movieDB-logo-mobile {
+        width: 150px;
+        position: relative;
+        bottom: 15px;
+    }
+
+
+
+    .website-pages-mobile {
+        position: relative;
+        right: 40px;
+
+    }
+}

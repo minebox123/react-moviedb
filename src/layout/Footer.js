@@ -113,7 +113,7 @@ class Footer extends Component {
               </section>
               <section className="movieDB-links-mobile">
                 <img
-                  src="https://www.themoviedb.org/assets/2/v4/logos/stacked-green-cae7a95e2590dbdde28284ac26245cb2792788838f5c498b892e8d01c183e6f3.svg"
+                  src="https://www.themoviedb.org/assets/2/v4/logos/powered-by-rectangle-green-dcada16968ed648d5eb3b36bbcfdd8cdf804f723dcca775c8f2bf4cea025aad6.svg"
                   alt="The Movie DB logo"
                   className="movieDB-logo-mobile"
                 />
