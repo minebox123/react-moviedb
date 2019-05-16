@@ -21,7 +21,7 @@ class Header extends Component {
       search: e.target.value
     });
 
-  onSearchClick = e => {
+  onSearchClick = () => {
     this.setState({
       search: ""
     });

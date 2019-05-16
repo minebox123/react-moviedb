@@ -14,6 +14,7 @@ class Cast extends Component {
   };
   componentDidMount() {
     const { id } = this.props;
+
     fetch(
       `https://api.themoviedb.org/3/movie/${id}/credits?api_key=81f382d33088c6d52099a62eab51d967`
     )
@@ -44,6 +45,7 @@ class Cast extends Component {
   }
   render() {
     const { cast } = this.state;
+
     return (
       <div className="cast">
         <h2>Top Billed Cast</h2>

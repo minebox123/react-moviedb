@@ -7,8 +7,6 @@
 .menu-wrap {
     position: relative;
     z-index: 1;
-
-
 }
 
 .menu-wrap .toggler {
@@ -52,7 +50,7 @@
 /* Hamburger Lines - Top & Bottom */
 .menu-wrap .hamburger>div::before,
 .menu-wrap .hamburger>div::after {
-    content: '';
+    content: "";
     position: absolute;
     z-index: 1;
     top: -10px;
@@ -145,9 +143,6 @@
     transition: color 0.4s ease;
 }
 
-
-
-
 .footer-content-mobile {
     display: flex;
     align-items: center;
@@ -166,11 +161,9 @@
     line-height: 2;
 }
 
-
 /*  WIDTH < 400px*/
 
-@media screen and (max-width: 420px) {
-
+@media screen and (max-width: 440px) {
     .people-container ul {
         justify-content: space-around;
     }
@@ -193,8 +186,9 @@
     }
 
     .person-name h3 {
+        font-size: 16px;
+        font-weight: 400;
         margin: 5px 0;
-
     }
 
     /* FOOTER */
@@ -204,11 +198,173 @@
         bottom: 15px;
     }
 
-
-
     .website-pages-mobile {
         position: relative;
         right: 40px;
+    }
+
+    /* ACTOR INFORMATION */
+    .mobile__actor-information {
+        display: flex;
+        border-bottom: 1px solid #e6e6e6;
+        padding-bottom: 10px;
+    }
+
+    .mobile__actor-information img {
+        width: 100px;
+        height: 150px;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+
+    .text-facts {
+        margin-top: 10px;
+        display: block;
+        margin-left: 15px;
+        border-bottom: none;
+    }
+
+    .text-facts h2 {
+        font-size: 20px;
+    }
+
+    .text-facts p {
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    .text-facts span {
+        padding: 0;
+        font-weight: 100;
+        font-size: 15px;
+    }
+
+    .mobile__actor-biography {
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+
+
+    .mobile__actor-biography h2 {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 20px;
+        font-weight: 400;
+        font-size: 18px;
 
     }
+
+    .drop-down {
+        margin: 0 20px;
+        padding-bottom: 10px;
+        line-height: 1.2;
+        border-bottom: none;
+    }
+
+    .buttons {
+        width: 100%;
+        margin-top: 10px;
+        padding: 0 10px;
+
+    }
+
+    .showButton {
+        width: 50%;
+    }
+
+    .movieButton {
+        width: 50%;
+    }
+
+
+    .credit-list p {
+        font-size: 14px;
+    }
+
+    .mobile__combined-credits {
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+
+    /*  MOVIE INFORMATION  */
+    .mobile-movie {
+        margin-top: 70px;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+    }
+
+    .mobile-movie__movie-info {
+        display: flex;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    .mobile-movie__movie-info img {
+        width: 150px;
+        height: 225px;
+        margin-top: 10px;
+        margin-left: 10px;
+
+    }
+
+    .text-facts {
+        display: block;
+        border: none;
+    }
+
+    .text-facts ul {
+        padding: 0;
+
+    }
+
+    .text-facts li {
+        list-style: none;
+        text-align: left;
+
+        margin-right: 10px;
+        font-size: 14px;
+    }
+
+    .text-facts h3 {
+        font-size: 15px;
+        font-weight: 600px;
+
+    }
+
+    .text-facts h3 p {
+        font-weight: 400;
+        margin: 0;
+    }
+
+    .mobile-movie__movie-overview h2 {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 20px;
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    .cast h2 {
+        font-size: 18px;
+        margin-left: 20px;
+    }
+
+    .actor-container {
+        display: block;
+    }
+
+    .actor-list {
+        display: flex;
+        width: 375px;
+    }
+
+    .actor-list img {
+        width: 60px;
+        height: 90px;
+
+    }
+
 }
