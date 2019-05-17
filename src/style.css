@@ -503,7 +503,7 @@ body {
 }
 
 .actor-container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 
   display: flex;
@@ -511,7 +511,7 @@ body {
 }
 
 .cast {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -573,7 +573,7 @@ body {
 }
 
 .video-container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   overflow: scroll;
@@ -618,7 +618,7 @@ body {
 }
 
 .media {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 

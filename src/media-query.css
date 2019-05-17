@@ -245,15 +245,12 @@
         border-bottom: 1px solid #e6e6e6;
     }
 
-
-
     .mobile__actor-biography h2 {
         display: flex;
         justify-content: space-between;
         margin: 10px 20px;
         font-weight: 400;
         font-size: 18px;
-
     }
 
     .drop-down {
@@ -267,7 +264,6 @@
         width: 100%;
         margin-top: 10px;
         padding: 0 10px;
-
     }
 
     .showButton {
@@ -278,7 +274,6 @@
         width: 50%;
     }
 
-
     .credit-list p {
         font-size: 14px;
     }
@@ -288,68 +283,97 @@
         padding-bottom: 10px;
     }
 
-    /*  MOVIE INFORMATION  */
-    .mobile-movie {
-        margin-top: 70px;
-        width: 100%;
-        height: 100%;
-        background-color: #fff;
+    /*  MOBILE MOVIE INFORMATION */
+    .movieInfo-container {
+        max-width: 432px;
     }
 
-    .mobile-movie__movie-info {
-        display: flex;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #e6e6e6;
+    .movie-poster {
+        margin-bottom: 20px;
     }
 
-    .mobile-movie__movie-info img {
+    .movie-poster img {
         width: 150px;
         height: 225px;
-        margin-top: 10px;
-        margin-left: 10px;
-
+        margin: 0;
+        margin-top: 20px;
+        margin-left: 20px;
     }
 
-    .text-facts {
-        display: block;
-        border: none;
-    }
-
-    .text-facts ul {
-        padding: 0;
-
-    }
-
-    .text-facts li {
-        list-style: none;
-        text-align: left;
-
-        margin-right: 10px;
-        font-size: 14px;
-    }
-
-    .text-facts h3 {
-        font-size: 15px;
-        font-weight: 600px;
-
-    }
-
-    .text-facts h3 p {
-        font-weight: 400;
+    .movieInfo-title {
         margin: 0;
     }
 
-    .mobile-movie__movie-overview h2 {
+    .movieInfo-title h1 {
+        margin: 0;
+        font-size: 18px;
+        margin-left: 20px;
+        width: 40%;
+        margin-top: 3rem;
+    }
+
+    .user-score {
+        width: 120px;
+        margin-left: 20px;
+    }
+
+    .user-score p {
+        width: 100px;
+    }
+
+    .user-score span {
+        font-size: 18px;
+    }
+
+    .overview {
+        display: none;
+    }
+
+    .small-container {
+        display: block;
+        margin-left: 20px;
+    }
+
+    .revenue {
+        display: none;
+    }
+
+    .budget {
+        display: none;
+    }
+
+    .release-dates h3 {
+        font-weight: 500;
+        line-height: 1;
+    }
+
+    .runtime {
+        margin-top: 10px;
+    }
+
+    .runtime h3 {
+        font-weight: 500;
+        line-height: 1;
+    }
+
+    .mobile-overview {
+        border-bottom: 1px solid #e6e6e6;
+        cursor: pointer;
+    }
+
+    .mobile-overview h2 {
+        font-weight: 500;
+        font-size: 18px;
         display: flex;
         justify-content: space-between;
         margin: 10px 20px;
-        font-weight: 400;
-        font-size: 18px;
     }
 
     .cast h2 {
         font-size: 18px;
+        font-weight: 500;
         margin-left: 20px;
+        text-align: center;
     }
 
     .actor-container {
@@ -358,13 +382,42 @@
 
     .actor-list {
         display: flex;
-        width: 375px;
+        width: 95%;
+        height: 92px;
+        box-shadow: none;
+        margin: 0 auto;
+    }
+
+
+    .actor-list:nth-child(n + 2) {
+        margin-top: 10px;
     }
 
     .actor-list img {
         width: 60px;
         height: 90px;
+    }
 
+    .media-links h2 {
+        display: none;
+    }
+
+    .media-links {
+
+        margin: 0 auto;
+    }
+
+    .video-container {
+        display: block;
+        margin: 0 auto;
+
+    }
+
+
+
+    .video {
+        width: 400px;
+        height: 225px;
     }
 
 }

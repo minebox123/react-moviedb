@@ -6,7 +6,8 @@ import Cast from "./Cast";
 import Videos from "./Videos";
 import Backdrops from "./Backdrops";
 import Posters from "./Posters";
-import Mobile from "./Mobile";
+import parse from "html-react-parser";
+// import Mobile from "./Mobile";
 
 // Create a page with some information about a movie.
 // One needs to load id from a movie by clicking on a poster.
@@ -17,7 +18,8 @@ class AdditionalInfo extends Component {
     isVideo: true,
     isBackdrop: false,
     isPoster: false,
-    width: window.innerWidth
+    width: window.innerWidth,
+    isClosed: true
   };
 
   onVideoClick = () => {
@@ -43,6 +45,11 @@ class AdditionalInfo extends Component {
       isPoster: true
     });
   };
+
+  onClick = () =>
+    this.setState({
+      isClosed: !this.state.isClosed
+    });
 
   componentDidMount() {
     window.addEventListener("resize", this.updateWidth());
@@ -78,9 +85,9 @@ class AdditionalInfo extends Component {
       isVideo,
       isBackdrop,
       isPoster,
-      width
+      isClosed
     } = this.state;
-    const isLess = width < 440;
+    // const isLess = width < 440;
 
     const style = {
       backgroundImage: `url(https://image.tmdb.org/t/p/w1280/${
@@ -91,112 +98,120 @@ class AdditionalInfo extends Component {
       backgroundRepeat: "no-repeat"
     };
     return (
-      <React.Fragment>
-        {!isLess ? (
-          <div className="movieInfo-container">
-            {isLoading ? (
-              <div>
-                <h1>Loading</h1>
-              </div>
-            ) : (
-              <React.Fragment>
-                <div className="movie-info-overlay">
-                  <section className="title-section" style={style}>
-                    <div className="movieInfo-wrapper">
-                      <div className="movie-poster">
-                        <img
-                          src={`https://image.tmdb.org/t/p/w500/${
-                            movie.poster_path
-                          }`}
-                          alt={movie.title}
-                        />
-                      </div>
-                      <div className="movieInfo-title">
-                        <h1>{movie.title}</h1>
-                        <div className="user-score">
-                          <p>User Score</p>
-                          <span>{movie.vote_average}</span>
-                        </div>
-                        <div className="overview">
-                          <h3>Overview</h3>
-                          <p>{movie.overview}</p>
-                        </div>
-                        <div className="small-container">
-                          <div className="release-dates">
-                            <h3>Release date</h3>
-                            <p>{movie.release_date}</p>
-                          </div>
-                          <div className="runtime">
-                            <h3>Runtime</h3>
-                            <Runtime runtime={movie.runtime} />
-                          </div>
-                          <div className="budget">
-                            <h3>Budget</h3>
-                            <Budget budget={movie.budget} />
-                          </div>
-                          <div className="revenue">
-                            <h3>Revenue</h3>
-                            <Revenue revenue={movie.revenue} />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-                <section className="cast-section">
-                  <Cast id={movie.id} />
-                </section>
-                <section className="review">
-                  <Review id={movie.id} title={movie.title} />
-                </section>
-                <section className="media">
-                  <div className="media-links">
-                    <h2>Media</h2>
-                    <ul>
-                      {isVideo ? (
-                        <li
-                          style={{ borderBottom: "4px solid #1586B5" }}
-                          onClick={this.onVideoClick}
-                        >
-                          <h3>Videos</h3>
-                        </li>
-                      ) : (
-                        <li onClick={this.onVideoClick}>Videos</li>
-                      )}
-                      {isBackdrop ? (
-                        <li
-                          style={{ borderBottom: "4px solid #1586b5" }}
-                          onClick={this.onBackdropClick}
-                        >
-                          <h3>Backdrops</h3>
-                        </li>
-                      ) : (
-                        <li onClick={this.onBackdropClick}>Backdrops</li>
-                      )}
-                      {isPoster ? (
-                        <li
-                          style={{ borderBottom: "4px solid #1586b5" }}
-                          onClick={this.onPosterClick}
-                        >
-                          <h3>Posters</h3>
-                        </li>
-                      ) : (
-                        <li onClick={this.onPosterClick}>Posters</li>
-                      )}
-                    </ul>
-                  </div>
-                  {isVideo ? (
-                    <Videos id={movie.id} />
-                  ) : isBackdrop ? (
-                    <Backdrops id={movie.id} />
-                  ) : isPoster ? (
-                    <Posters id={movie.id} />
-                  ) : null}
-                </section>
-              </React.Fragment>
-            )}
+      <div className="movieInfo-container">
+        {isLoading ? (
+          <div>
+            <h1>Loading</h1>
           </div>
         ) : (
+          <React.Fragment>
+            <div className="movie-info-overlay">
+              <section className="title-section" style={style}>
+                <div className="movieInfo-wrapper">
+                  <div className="movie-poster">
+                    <img
+                      src={`https://image.tmdb.org/t/p/w500/${
+                        movie.poster_path
+                      }`}
+                      alt={movie.title}
+                    />
+                  </div>
+                  <div className="movieInfo-title">
+                    <h1>{movie.title}</h1>
+                    <div className="user-score">
+                      <p>User Score</p>
+                      <span>{movie.vote_average}</span>
+                    </div>
+                    <div className="overview">
+                      <h3>Overview</h3>
+                      <p>{movie.overview}</p>
+                    </div>
+                    <div className="small-container">
+                      <div className="release-dates">
+                        <h3>Release date</h3>
+                        <p>{movie.release_date}</p>
+                      </div>
+                      <div className="runtime">
+                        <h3>Runtime</h3>
+                        <Runtime runtime={movie.runtime} />
+                      </div>
+                      <div className="budget">
+                        <h3>Budget</h3>
+                        <Budget budget={movie.budget} />
+                      </div>
+                      <div className="revenue">
+                        <h3>Revenue</h3>
+                        <Revenue revenue={movie.revenue} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div className="mobile-overview" onClick={this.onClick}>
+              <h2>
+                Overview <i className="fas fa-angle-down" />
+              </h2>
+              {!isClosed ? (
+                <div className="mobile__actor-biography drop-down">
+                  {parse(movie.overview)}
+                </div>
+              ) : null}
+            </div>
+            <section className="cast-section">
+              <Cast id={movie.id} />
+            </section>
+            <section className="review">
+              <Review id={movie.id} title={movie.title} />
+            </section>
+            <section className="media">
+              <div className="media-links">
+                <h2>Media</h2>
+                <ul>
+                  {isVideo ? (
+                    <li
+                      style={{ borderBottom: "4px solid #1586B5" }}
+                      onClick={this.onVideoClick}
+                    >
+                      <h3>Videos</h3>
+                    </li>
+                  ) : (
+                    <li onClick={this.onVideoClick}>Videos</li>
+                  )}
+                  {isBackdrop ? (
+                    <li
+                      style={{ borderBottom: "4px solid #1586b5" }}
+                      onClick={this.onBackdropClick}
+                    >
+                      <h3>Backdrops</h3>
+                    </li>
+                  ) : (
+                    <li onClick={this.onBackdropClick}>Backdrops</li>
+                  )}
+                  {isPoster ? (
+                    <li
+                      style={{ borderBottom: "4px solid #1586b5" }}
+                      onClick={this.onPosterClick}
+                    >
+                      <h3>Posters</h3>
+                    </li>
+                  ) : (
+                    <li onClick={this.onPosterClick}>Posters</li>
+                  )}
+                </ul>
+              </div>
+              {isVideo ? (
+                <Videos id={movie.id} />
+              ) : isBackdrop ? (
+                <Backdrops id={movie.id} />
+              ) : isPoster ? (
+                <Posters id={movie.id} />
+              ) : null}
+            </section>
+          </React.Fragment>
+        )}
+      </div>
+      /* ) : (
           <React.Fragment>
             <Mobile movie={movie} />
             <section className="cast-section">
@@ -204,7 +219,7 @@ class AdditionalInfo extends Component {
             </section>
           </React.Fragment>
         )}
-      </React.Fragment>
+      </React.Fragment> */
     );
   }
 }
