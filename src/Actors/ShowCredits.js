@@ -30,7 +30,7 @@ class ShowCredits extends Component {
                   {item.first_air_date.slice(0, 4)}
 
                   <p>
-                    <Link to={`/movieInfo/${item.id}`}>
+                    <Link to={`/showInfo/${item.id}`}>
                       <span>{item.name}</span>
                     </Link>
                     {item.character !== "" ? `as ${item.character}` : null}

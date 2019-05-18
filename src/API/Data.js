@@ -59,7 +59,9 @@ class Data extends Component {
                 <h3>{item.title}</h3>
               </div>
               <div className="release-date">
-                <p>Release date: {item.release_date}</p>
+                <p>
+                  Release date: <span>{item.release_date}</span>
+                </p>
               </div>
             </div>
           );

@@ -7,7 +7,6 @@ import Videos from "./Videos";
 import Backdrops from "./Backdrops";
 import Posters from "./Posters";
 import parse from "html-react-parser";
-// import Mobile from "./Mobile";
 
 // Create a page with some information about a movie.
 // One needs to load id from a movie by clicking on a poster.
@@ -87,7 +86,6 @@ class AdditionalInfo extends Component {
       isPoster,
       isClosed
     } = this.state;
-    // const isLess = width < 440;
 
     const style = {
       backgroundImage: `url(https://image.tmdb.org/t/p/w1280/${
@@ -211,15 +209,6 @@ class AdditionalInfo extends Component {
           </React.Fragment>
         )}
       </div>
-      /* ) : (
-          <React.Fragment>
-            <Mobile movie={movie} />
-            <section className="cast-section">
-              <Cast id={movie.id} />
-            </section>
-          </React.Fragment>
-        )}
-      </React.Fragment> */
     );
   }
 }

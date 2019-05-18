@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Runtime from "./Runtime";
-
+import parse from "html-react-parser";
 import Review from "./Review";
 import Cast from "./Cast";
 import Videos from "./Videos";
@@ -16,7 +16,8 @@ class AdditionalInfo extends Component {
     isLoading: true,
     isVideo: true,
     isBackdrop: false,
-    isPoster: false
+    isPoster: false,
+    isClosed: true
   };
 
   onVideoClick = () => {
@@ -43,6 +44,11 @@ class AdditionalInfo extends Component {
     });
   };
 
+  onClick = () =>
+    this.setState({
+      isClosed: !this.state.isClosed
+    });
+
   componentDidMount() {
     const { id } = this.props;
     if (!id) {
@@ -60,7 +66,14 @@ class AdditionalInfo extends Component {
       );
   }
   render() {
-    const { movie, isLoading, isVideo, isBackdrop, isPoster } = this.state;
+    const {
+      movie,
+      isLoading,
+      isVideo,
+      isBackdrop,
+      isPoster,
+      isClosed
+    } = this.state;
 
     const style = {
       backgroundImage: `url(https://image.tmdb.org/t/p/w1280/${
@@ -103,8 +116,8 @@ class AdditionalInfo extends Component {
                       <div className="release-dates">
                         <h3>First air date</h3>
                         <p>{movie.first_air_date}</p>
-                        <h3>Last air date</h3>
-                        <p>{movie.last_air_date}</p>
+                        <h3 className="last-date">Last air date</h3>
+                        <p className="last-date">{movie.last_air_date}</p>
                       </div>
                       <div className="number-of-seasons">
                         <h3>Seasons</h3>
@@ -122,6 +135,16 @@ class AdditionalInfo extends Component {
                   </div>
                 </div>
               </section>
+              <div className="mobile-overview" onClick={this.onClick}>
+                <h2>
+                  Overview <i className="fas fa-angle-down" />
+                </h2>
+                {!isClosed ? (
+                  <div className="mobile__actor-biography drop-down">
+                    {parse(movie.overview)}
+                  </div>
+                ) : null}
+              </div>
             </div>
             <section className="cast-section">
               <Cast id={movie.id} />

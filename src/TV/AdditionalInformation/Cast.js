@@ -37,8 +37,10 @@ class Cast extends Component {
                     />
                   </Link>
                 </div>
-                <h4>{item.name}</h4>
-                <p>{item.character}</p>
+                <div>
+                  <h4>{item.name}</h4>
+                  <p>{item.character}</p>
+                </div>
               </li>
             );
           });

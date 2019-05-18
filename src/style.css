@@ -4,12 +4,10 @@ body {
   background: #0f0c29;
   background: -webkit-linear-gradient(to top, #24243e, #302b63, #0f0c29);
   background: linear-gradient(to top, #24243e, #302b63, #0f0c29);
-
 }
 
 * {
   box-sizing: border-box;
-
 }
 
 /*  HEADER SECTION*/
@@ -97,7 +95,7 @@ body {
 
 /*  NEW RELEASES SECTION*/
 .newReleases {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
   border-bottom: 1px solid #505089;
@@ -107,7 +105,6 @@ body {
   width: 200px;
   border-radius: 5px;
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
-
 }
 
 .overlay:hover img {
@@ -127,7 +124,6 @@ body {
 .vote {
   z-index: 1;
   margin-bottom: 10px;
-
 }
 
 .newReleases h2 {
@@ -136,7 +132,7 @@ body {
 
 .movie-carousel {
   display: flex;
-  min-width: 1200px;
+  max-width: 1200px;
   justify-content: space-between;
 }
 
@@ -178,6 +174,8 @@ body {
   width: 0;
 }
 
+
+
 /* NOW PLAYING SECTION */
 .now-playing-slide {
   display: flex;
@@ -206,7 +204,7 @@ body {
 
 /*  TRENDING SECTION */
 .slider {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
   display: flex;
@@ -333,7 +331,6 @@ body {
   margin: 0 auto;
   margin-top: 3rem;
   overflow: hidden;
-
 }
 
 .top-rated h2 {
@@ -345,8 +342,6 @@ body {
   min-width: 1200px;
   justify-content: space-between;
 }
-
-
 
 /* SEARCH BOX */
 .search-box {
@@ -425,7 +420,7 @@ body {
 }
 
 .movieInfo-wrapper {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   position: relative;
@@ -537,7 +532,7 @@ body {
 
 /*  REVIEW SECTION  */
 .review-container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -557,7 +552,7 @@ body {
 }
 
 .review-list p {
-  width: 1100px;
+  max-width: 1100px;
 
   margin: 0 auto;
   margin-bottom: 60px;
@@ -586,6 +581,7 @@ body {
 
 .backdrop-list {
   list-style: none;
+
 }
 
 .backdrop {
@@ -594,7 +590,7 @@ body {
 }
 
 .backdrops-container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   overflow: scroll;
@@ -612,7 +608,7 @@ body {
 
 .posters-container {
   display: flex;
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   overflow: scroll;
 }
@@ -642,7 +638,6 @@ body {
 
 .actor {
   background-color: #f6f6f6;
-
 }
 
 .actorInfo-container {
@@ -650,7 +645,6 @@ body {
   display: flex;
   width: 1200px;
   margin: 0 auto;
-
 }
 
 .personalInfo {
@@ -763,9 +757,7 @@ body {
 .credit-list p {
   width: 600px;
   margin-left: 40px;
-
 }
-
 
 .credit-list span {
   margin-right: 5px;
@@ -895,8 +887,6 @@ footer {
   display: flex;
 
   width: 100%;
-
-
 }
 
 .footer-content {
@@ -962,7 +952,6 @@ footer {
   text-decoration: none;
   color: #e0e0e0;
 }
-
 
 .main-container {
   min-height: 80vh;

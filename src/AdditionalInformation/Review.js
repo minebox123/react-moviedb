@@ -54,9 +54,11 @@ class Review extends Component {
             Reviews{" "}
             <span>
               {reviews.length}
+
               <i className="fas fa-caret-down" onClick={this.onArrowClick} />
             </span>
           </h3>
+          <i className="fas fa-angle-down" onClick={this.onArrowClick} />
         </div>
 
         {!isHidden ? reviews.slice(0, 1) : reviews}

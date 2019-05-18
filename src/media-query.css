@@ -304,11 +304,17 @@
         margin: 0;
     }
 
+
+
+    .small-container {
+        width: 150px;
+    }
+
     .movieInfo-title h1 {
         margin: 0;
         font-size: 18px;
         margin-left: 20px;
-        width: 40%;
+        width: 100%;
         margin-top: 3rem;
     }
 
@@ -319,6 +325,7 @@
 
     .user-score p {
         width: 100px;
+
     }
 
     .user-score span {
@@ -403,21 +410,230 @@
     }
 
     .media-links {
-
         margin: 0 auto;
     }
 
-    .video-container {
-        display: block;
-        margin: 0 auto;
+    .media-links ul {
+        padding: 0;
+    }
 
+    .video-container {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+
+
+    .video-list:nth-child(n + 2) {
+        margin-left: 0;
     }
 
 
 
     .video {
-        width: 400px;
+        max-width: 400px;
         height: 225px;
     }
 
+    .review-list {
+        box-shadow: none;
+    }
+
+    .review-list p {
+        padding: 0 20px;
+    }
+
+    .social {
+        margin: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .social h3 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 500;
+
+    }
+
+
+    .social h2 {
+        display: none;
+    }
+
+    .fa-caret-down {
+        display: none;
+    }
+
+    .backdrops-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .backdrop-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .backdrop {
+        width: 350px;
+        height: auto;
+    }
+
+    .posters-container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .poster {
+        width: 150px;
+        height: 225px;
+    }
+
+    /* SHOW INFORMATION */
+    .number-of-seasons {
+        display: none;
+    }
+
+    .number-of-episodes {
+        display: none;
+    }
+
+    .last-date {
+        display: none;
+    }
+
+    /* BANNER */
+    .banner img {
+        margin: 0 auto;
+        width: 432px;
+        height: 243px;
+    }
+
+    .inf {
+        width: 200px;
+        bottom: 7rem;
+    }
+
+    .inf h3 {
+        font-size: 14px;
+
+    }
+
+    .inf h2 {
+        font-size: 20px;
+    }
+
+    .genre {
+        font-size: 14px;
+    }
+
+    /* NEW RELEASES */
+    .movie-container {
+        width: 80px;
+    }
+
+    .poster {
+        width: 80px;
+        height: 120px;
+    }
+
+    .poster img {
+        width: 80px;
+        height: 120px;
+    }
+
+    .title h3 {
+        font-weight: 500;
+        font-size: 14px;
+        width: 80px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .release-date {
+        font-size: 12px;
+        width: 80px;
+    }
+
+    .release-date p {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .release-date span {
+        padding-top: 15px;
+
+    }
+
+
+
+    .carousel {
+        overflow: scroll;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .new-releases-slide {
+        min-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        overflow: scroll;
+
+    }
+
+    .banner-back-arrow,
+    .banner-next-arrow {
+        display: none;
+    }
+
+    .now-playing-slide {
+        display: flex;
+        justify-content: left;
+    }
+
+}
+
+@media screen and (max-width: 380px) {
+    .movieInfo-title h1 {
+        width: 80%;
+    }
+
+    .movieInfo-title {
+        width: 130px;
+    }
+
+    .small-container {
+        width: 130px;
+    }
+
+    .media-links ul {
+        padding: 0;
+        margin: 20px auto;
+    }
+
+    .media-links ul li {
+        margin: 0;
+    }
+
+    .video {
+        width: 350px;
+        height: 196.88px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .video {
+        width: 300px;
+        height: 168.75px;
+    }
+
+    .backdrop {
+        width: 300px;
+        height: auto;
+    }
 }
