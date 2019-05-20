@@ -21,8 +21,9 @@ class App extends Component {
       <Router>
         <div className="App">
           <Header />
-          <div className="main-container">
-            <Switch>
+
+          <Switch>
+            <div className="main-container">
               <Route exact path="/" component={MainContainer} />
               <Route exact path="/tv" component={TV} />
               <Route exact path="/people" component={PeopleContainer} />
@@ -36,8 +37,9 @@ class App extends Component {
                 component={SearchResults}
               />
               <Route exact path="/guestPage" component={Guest} />
-            </Switch>
-          </div>
+            </div>
+          </Switch>
+
           <Footer />
         </div>
       </Router>
