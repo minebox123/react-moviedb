@@ -22,19 +22,15 @@ class App extends Component {
         <div className="App">
           <Header />
           <div className="main-container">
-            <Route exact path="/" component={MainContainer} />
             <Switch>
-              <Route exact path="/tv" component={TV} />
-              <Route exact path="/people" component={PeopleContainer} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/movieInfo/:id" component={MovieInfo} />
-              <Route exact path="/showInfo/:id" component={ShowInfo} />
-              <Route exact path="/actorInfo/:id" component={ActorInfo} />
-              <Route
-                exact
-                path="/results/:userInput"
-                component={SearchResults}
-              />
+              <Route exact={true} path="/" component={MainContainer} />
+              <Route path="/tv" component={TV} />
+              <Route path="/people" component={PeopleContainer} />
+              <Route path="/login" component={Login} />
+              <Route path="/movieInfo/:id" component={MovieInfo} />
+              <Route path="/showInfo/:id" component={ShowInfo} />
+              <Route path="/actorInfo/:id" component={ActorInfo} />
+              <Route path="/results/:userInput" component={SearchResults} />
               <Route exact path="/guestPage" component={Guest} />
             </Switch>
           </div>
