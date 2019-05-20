@@ -22,8 +22,8 @@ class App extends Component {
         <div className="App">
           <Header />
 
-          <Route exact={true} path="/" component={MainContainer} />
           <Switch>
+            <Route exact={true} path="/" component={MainContainer} />
             <Route path="/tv" component={TV} />
             <Route path="/people" component={PeopleContainer} />
             <Route path="/login" component={Login} />
