@@ -21,18 +21,19 @@ class App extends Component {
       <Router>
         <div className="App">
           <Header />
-
-          <Switch>
-            <Route exact={true} path="/" component={MainContainer} />
-            <Route path="/tv" component={TV} />
-            <Route path="/people" component={PeopleContainer} />
-            <Route path="/login" component={Login} />
-            <Route path="/movieInfo/:id" component={MovieInfo} />
-            <Route path="/showInfo/:id" component={ShowInfo} />
-            <Route path="/actorInfo/:id" component={ActorInfo} />
-            <Route path="/results/:userInput" component={SearchResults} />
-            <Route exact path="/guestPage" component={Guest} />
-          </Switch>
+          <div className="main-container">
+            <Switch>
+              <Route exact={true} path="/" component={MainContainer} />
+              <Route path="/tv" component={TV} />
+              <Route path="/people" component={PeopleContainer} />
+              <Route path="/login" component={Login} />
+              <Route path="/movieInfo/:id" component={MovieInfo} />
+              <Route path="/showInfo/:id" component={ShowInfo} />
+              <Route path="/actorInfo/:id" component={ActorInfo} />
+              <Route path="/results/:userInput" component={SearchResults} />
+              <Route exact path="/guestPage" component={Guest} />
+            </Switch>
+          </div>
         </div>
         <Footer />
       </Router>
