@@ -2,7 +2,7 @@
   "name": "react-moviedb",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://minebox123.github.io/react-moviedb/",
+  "homepage": "https://minebox123.github.io/react-moviedb",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gh-pages": "^2.0.1",
