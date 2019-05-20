@@ -52,7 +52,9 @@ class TopRated extends Component {
             <h3>{item.name}</h3>
           </div>
           <div className="release-date">
-            <p>Release date: {item.first_air_date}</p>
+            <p>
+              Release date: <span>{item.first_air_date}</span>
+            </p>
           </div>
         </div>
       );

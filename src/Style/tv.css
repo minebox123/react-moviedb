@@ -14,13 +14,15 @@
 
 .on-air-carousel {
     display: flex;
-    width: 1200px;
+    max-width: 1200px;
 }
 
 .on-the-air {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
+    border-bottom: 1px solid #505089;
+    margin-top: 48px;
 }
 
 .on-the-air h2 {

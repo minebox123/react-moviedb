@@ -304,8 +304,6 @@
         margin: 0;
     }
 
-
-
     .small-container {
         width: 150px;
     }
@@ -325,7 +323,6 @@
 
     .user-score p {
         width: 100px;
-
     }
 
     .user-score span {
@@ -395,7 +392,6 @@
         margin: 0 auto;
     }
 
-
     .actor-list:nth-child(n + 2) {
         margin-top: 10px;
     }
@@ -420,16 +416,11 @@
     .video-container {
         flex-direction: column;
         align-items: center;
-
     }
-
-
 
     .video-list:nth-child(n + 2) {
         margin-left: 0;
     }
-
-
 
     .video {
         max-width: 400px;
@@ -454,9 +445,7 @@
         margin: 0;
         font-size: 18px;
         font-weight: 500;
-
     }
-
 
     .social h2 {
         display: none;
@@ -519,7 +508,6 @@
 
     .inf h3 {
         font-size: 14px;
-
     }
 
     .inf h2 {
@@ -531,6 +519,10 @@
     }
 
     /* NEW RELEASES */
+    .newReleases h2 {
+        text-align: center;
+    }
+
     .movie-container {
         width: 80px;
     }
@@ -562,15 +554,11 @@
     .release-date p {
         display: flex;
         flex-direction: column;
-
     }
 
     .release-date span {
         padding-top: 15px;
-
     }
-
-
 
     .carousel {
         overflow: scroll;
@@ -584,18 +572,117 @@
         justify-content: space-between;
         overflow: scroll;
 
+        padding-left: 8px;
     }
+
+
 
     .banner-back-arrow,
     .banner-next-arrow {
         display: none;
     }
 
+    /*  NOW PLAYING  */
     .now-playing-slide {
+        min-width: 100%;
         display: flex;
-        justify-content: left;
+        justify-content: space-between;
+        overflow: scroll;
+        padding-left: 8px;
     }
 
+    .now-playing h2 {
+        text-align: center;
+    }
+
+    /* TOP RATED */
+
+
+    .top-rated-slide {
+        min-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        overflow: scroll;
+        padding-left: 8px;
+    }
+
+    .top-rated h2 {
+        text-align: center;
+    }
+
+    .top-rated-carousel {
+        overflow: scroll;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* TRAILERS */
+    .trailers h1 {
+        text-align: center;
+    }
+
+    .youtube-videos {
+        min-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        overflow: scroll;
+        padding-left: 8px;
+        padding-bottom: 20px;
+    }
+
+    .trailer-carousel {
+        overflow: scroll;
+        width: 100%;
+        margin: 0 auto;
+        margin-right: 8px;
+    }
+
+    .youtube {
+        width: 300px;
+        height: 168.75px;
+    }
+
+    /* NOW PLAYING TV */
+    .on-air-carousel {
+        overflow: scroll;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .on-air-slide {
+        min-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        overflow: scroll;
+        padding-left: 8px;
+
+    }
+
+    .no-show-image {
+        width: 80px;
+        height: 120px;
+    }
+
+
+    .airing-left,
+    .airing-right {
+        display: none;
+    }
+
+    .on-air-left,
+    .on-air-right {
+        display: none;
+    }
+
+    .tv-banner img {
+        margin: 0 auto;
+        width: 432px;
+        height: 243px;
+    }
+
+    .on-the-air h2 {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 380px) {
