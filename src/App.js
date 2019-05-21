@@ -10,7 +10,12 @@ import PeopleContainer from "./People/PeopleContainer";
 import Login from "./Sessions/Login";
 import TV from "./TV/TV";
 import Guest from "./Sessions/Guest";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  HashRouter
+} from "react-router-dom";
 import "./JavaScript/index.js";
 import "./style.css";
 import "./media-query.css";
@@ -22,8 +27,8 @@ class App extends Component {
         <Switch>
           <div className="App">
             <Header />
+            <Route exact path="/" component={MainContainer} />
             <div className="main-container">
-              <Route exact path="/" component={MainContainer} />
               <Route path="/tv" component={TV} />
               <Route path="/people" component={PeopleContainer} />
               <Route path="/login" component={Login} />
