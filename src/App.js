@@ -21,7 +21,9 @@ class App extends Component {
       <Router>
         <div className="App">
           <Header />
+
           <Switch>
+            <Route exact path="/" component={MainContainer} />
             <Route path="/tv" exact component={TV} />
             <Route path="/people" exact component={PeopleContainer} />
             <Route path="/login" exact component={Login} />
@@ -31,7 +33,7 @@ class App extends Component {
             <Route path="/results/:userInput" exact component={SearchResults} />
             <Route exact path="/guestPage" component={Guest} />
           </Switch>
-          <Route path="/" exact component={MainContainer} />
+
           <Footer />
         </div>
       </Router>
