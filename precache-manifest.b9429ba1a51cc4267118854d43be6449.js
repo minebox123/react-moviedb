@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/react-moviedb/static/media/www.a69740f5.svg"
   },
   {
-    "revision": "e63462080d86754a8d36",
+    "revision": "04e33cbaf1313688e7fd",
     "url": "/react-moviedb/static/css/main.e9ce9550.chunk.css"
   },
   {
@@ -32,8 +32,8 @@ self.__precacheManifest = [
     "url": "/react-moviedb/static/media/facebook.d6ed77da.svg"
   },
   {
-    "revision": "e63462080d86754a8d36",
-    "url": "/react-moviedb/static/js/main.dac816f8.chunk.js"
+    "revision": "04e33cbaf1313688e7fd",
+    "url": "/react-moviedb/static/js/main.99852cd8.chunk.js"
   },
   {
     "revision": "422e766543a3850de8db1f049775a1e9",
@@ -64,7 +64,7 @@ self.__precacheManifest = [
     "url": "/react-moviedb/static/media/cat.25b86834.png"
   },
   {
-    "revision": "dc69bc0dd8ac21be407ab7afe3025c0e",
+    "revision": "5452b0acd9857ecc4aa8daf6819745e2",
     "url": "/react-moviedb/index.html"
   }
 ];
