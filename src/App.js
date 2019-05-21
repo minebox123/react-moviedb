@@ -19,25 +19,24 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Route path="/">
+        <Switch>
           <div className="App">
             <Header />
             <div className="main-container">
-              <Switch>
-                <Route exact path="/" component={MainContainer} />
-                <Route path="/tv" component={TV} />
-                <Route path="/people" component={PeopleContainer} />
-                <Route path="/login" component={Login} />
-                <Route path="/movieInfo/:id" component={MovieInfo} />
-                <Route path="/showInfo/:id" component={ShowInfo} />
-                <Route path="/actorInfo/:id" component={ActorInfo} />
-                <Route path="/results/:userInput" component={SearchResults} />
-                <Route exact path="/guestPage" component={Guest} />
-              </Switch>
+              <Route exact path="/" component={MainContainer} />
+              <Route path="/tv" component={TV} />
+              <Route path="/people" component={PeopleContainer} />
+              <Route path="/login" component={Login} />
+              <Route path="/movieInfo/:id" component={MovieInfo} />
+              <Route path="/showInfo/:id" component={ShowInfo} />
+              <Route path="/actorInfo/:id" component={ActorInfo} />
+              <Route path="/results/:userInput" component={SearchResults} />
+              <Route exact path="/guestPage" component={Guest} />
             </div>
+
+            <Footer />
           </div>
-          <Footer />
-        </Route>
+        </Switch>
       </Router>
     );
   }
