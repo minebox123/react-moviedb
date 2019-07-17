@@ -84,7 +84,8 @@ class AdditionalInfo extends Component {
       isVideo,
       isBackdrop,
       isPoster,
-      isClosed
+      isClosed,
+      width
     } = this.state;
 
     const style = {
@@ -95,6 +96,7 @@ class AdditionalInfo extends Component {
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat"
     };
+
     return (
       <div className="movieInfo-container">
         {isLoading ? (
@@ -146,16 +148,19 @@ class AdditionalInfo extends Component {
                 </div>
               </section>
             </div>
-            <div className="mobile-overview" onClick={this.onClick}>
-              <h2>
-                Overview <i className="fas fa-angle-down" />
-              </h2>
-              {!isClosed ? (
-                <div className="mobile__actor-biography drop-down">
-                  {parse(movie.overview)}
-                </div>
-              ) : null}
-            </div>
+            {width < 500 ? (
+              <div className="mobile-overview" onClick={this.onClick}>
+                <h2>
+                  Overview <i className="fas fa-angle-down" />
+                </h2>
+                {!isClosed ? (
+                  <div className="mobile__actor-biography drop-down">
+                    {parse(movie.overview)}
+                  </div>
+                ) : null}
+              </div>
+            ) : null}
+
             <section className="cast-section">
               <Cast id={movie.id} />
             </section>

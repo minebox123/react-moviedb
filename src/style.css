@@ -658,6 +658,7 @@ body {
 
 .bio {
   background-color: #f6f6f6;
+  min-width: 900px;
 }
 
 .bio h2 {

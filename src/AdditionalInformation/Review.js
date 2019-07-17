@@ -51,12 +51,7 @@ class Review extends Component {
         <div className="social">
           <h2>Social</h2>
           <h3>
-            Reviews{" "}
-            <span>
-              {reviews.length}
-
-              <i className="fas fa-caret-down" onClick={this.onArrowClick} />
-            </span>
+            Reviews <span>{reviews.length}</span>
           </h3>
           <i className="fas fa-angle-down" onClick={this.onArrowClick} />
         </div>
